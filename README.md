@@ -1,44 +1,58 @@
 # MyExpense Tracker
 
 A lightweight web app to track daily expenses, set a monthly budget, and visualize spending by category.  
-Built with **HTML, CSS, and JavaScript** — no backend required.
+Built with **HTML, CSS, and JavaScript** (no backend).
 
 ---
 
 ## ✨ Features
-- Add, edit, and delete transactions
-- Set a monthly budget and see remaining balance
-- Category breakdown with an interactive pie chart (Chart.js)
-- Dark/Light theme toggle
-- Export transactions to CSV
-- Import transactions from CSV
+- Add & delete transactions
+- Monthly budget with remaining indicator (color-coded)
+- Category breakdown pie chart (Chart.js)
+- Dark / Light theme toggle (saved to preferences)
+- Export to CSV & Import from CSV
 - Undo last delete (snackbar)
 
 ---
 
+## 🚀 Live Demo
+If GitHub Pages is enabled:  
+👉 [MyExpense Tracker Demo](https://meet-innovate.github.io/myexpense-tracker/)
+
+---
+
+## 📸 Screenshots
+Here’s what the app looks like:
+
+![MyExpense Tracker Screenshot 1](./screenshot1.png)  
+![MyExpense Tracker Screenshot 2](./screenshot2.png)
+
+---
+
 ## 📂 Project Structure
-expense-tracker-main/
-├── index.html # Main HTML page
-├── style.css # App styling (themes, layout, responsive)
-├── script.js # App logic (budget, chart, CSV, undo)
-├── screen-shot.jpg # Example screenshot
-└── README.md # Project documentation
+myexpense-tracker/
+├── index.html
+├── style.css
+├── script.js
+├── screenshot1.png
+├── screenshot2.png
+└── README.md
+---
 
+## 🧰 Tech Stack
+- **HTML5**
+- **CSS** (custom theme with light/dark modes)
+- **JavaScript** (vanilla ES6+)
+- **Chart.js** (via CDN)
 
 ---
 
-## 🚀 How to Run
-1. Clone or download this repo (or unzip the folder).
-2. Open `index.html` in any browser (Chrome, Firefox, Edge).
-3. Start adding your transactions — everything is saved locally in the browser.
-
+## 🏁 Run Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/meet-innovate/myexpense-tracker.git
+   cd myexpense-tracker
 ---
-
-## 📸 Screenshot
-![App Screenshot](./screen-shot.jpg)
-
----
-
 ## 👤 Author
 **Meet Patel**  
 Bachelor of Science (Honours Specialization) in Computer Science  
