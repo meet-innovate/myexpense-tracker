@@ -39,7 +39,7 @@ myexpense-tracker/
 ├── screenshot2.png
 └── README.md
 
-
+```
 ## 🧰 Tech Stack
 - **HTML5**
 - **CSS** (custom theme with light/dark modes)
