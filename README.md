@@ -2,6 +2,7 @@
 
 A lightweight web app to track daily expenses, set a monthly budget, and visualize spending by category.  
 Built with **HTML, CSS, and JavaScript** (no backend).
+I built this project as part of my portfolio to practice frontend development and create a simple, real-world expense tracking tool.
 
 ---
 
