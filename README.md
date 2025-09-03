@@ -17,7 +17,7 @@ Built with **HTML, CSS, and JavaScript** (no backend).
 
 ## 🚀 Live Demo
 If GitHub Pages is enabled:  
-👉 [MyExpense Tracker Demo](https://meet-innovate.github.io/myexpense-tracker/)
+👉 **https://meet-innovate.github.io/myexpense-tracker/**
 
 ---
 
@@ -30,6 +30,7 @@ Here’s what the app looks like:
 ---
 
 ## 📂 Project Structure
+```text
 myexpense-tracker/
 ├── index.html
 ├── style.css
