@@ -38,7 +38,7 @@ myexpense-tracker/
 ├── screenshot1.png
 ├── screenshot2.png
 └── README.md
----
+
 
 ## 🧰 Tech Stack
 - **HTML5**
