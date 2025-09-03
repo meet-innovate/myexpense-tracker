@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyExpense Tracker — Meet Patel</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Chart.js library for category breakdown -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Top navigation bar -->
+  <header class="topbar">
+    <h1>MyExpense Tracker</h1>
+    <div class="topbar-actions">
+      <!-- Toggle dark/light theme -->
+      <button id="btn-dark">🌙 Dark</button>
+      <!-- Load example transactions -->
+      <button id="btn-seed">Load Sample Data</button>
+      <!-- Clear all saved data -->
+      <button id="btn-reset" class="danger">Factory Reset</button>
+      <!-- CSV export/import -->
+      <button id="btn-export">Export CSV</button>
+      <button id="btn-import">Import CSV</button>
+      <input id="csv-file" type="file" accept=".csv" hidden />
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- Left panel: Add new transactions and set monthly budget -->
+    <aside class="panel">
+      <h2>Add Transaction</h2>
+      <form id="tx-form">
+        <label>
+          Date
+          <input type="date" id="tx-date" required />
+        </label>
+        <label>
+          Description
+          <input type="text" id="tx-note" placeholder="e.g., Groceries" required />
+        </label>
+        <label>
+          Category
+          <select id="tx-cat" required>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Rent">Rent</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Other" selected>Other</option>
+          </select>
+        </label>
+        <label>
+          Amount
+          <input type="number" id="tx-amt" step="0.01" min="0" required />
+        </label>
+        <button type="submit" class="primary">Add</button>
+      </form>
+
+      <section class="summary">
+        <h3>This Month</h3>
+        <p id="sum-total">Total: —</p>
+        <div class="budget">
+          <label>
+            Monthly Budget
+            <input type="number" id="budget-input" placeholder="e.g., 1200" min="0" step="0.01" />
+          </label>
+          <p id="budget-remaining" class="badge">Remaining: —</p>
+        </div>
+      </section>
+    </aside>
+
+    <!-- Right panel: List of transactions and category chart -->
+    <section class="panel">
+      <h2>Transactions</h2>
+      <table class="table" id="tx-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Note</th>
+            <th>Category</th>
+            <th class="align-right">Amount</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tx-body"></tbody>
+      </table>
+      <p id="empty" class="muted">No transactions yet. Add your first one on the left.</p>
+
+      <h3 style="margin-top:24px;">Category Breakdown (This Month)</h3>
+      <canvas id="catChart" height="160"></canvas>
+    </section>
+  </main>
+
+  <!-- Snackbar (Undo) -->
+  <div id="snackbar" class="snackbar" role="status" aria-live="polite">
+    <span id="snackbar-text">Deleted.</span>
+    <button id="snackbar-undo" aria-label="Undo last action">Undo</button>
+  </div>
+
+ <!-- Footer -->
+<footer>
+  © 2025 Meet Patel — MyExpense Tracker
+</footer>
+
+
+  <!-- Main app script -->
+  <script src="script.js"></script>
+</body>
+</html>
+
